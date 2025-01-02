@@ -10,10 +10,10 @@ export default async function Home({searchParams}: {
 }) {
 
   const query = (await searchParams).query;
+  const params = { search: query || null };   // add the params to sanityFetch
 
   // const posts = await client.fetch(STARTUPS_QUERY);
-  const {data: posts} = await sanityFetch({query: STARTUPS_QUERY});   // will refetch anytime new startup entry added by anyone
-  // console.log(JSON.stringify(posts, null, 2));
+  const {data: posts} = await sanityFetch({query: STARTUPS_QUERY, params});   // will refetch anytime new startup entry added by anyone
 
   return (
     <>
