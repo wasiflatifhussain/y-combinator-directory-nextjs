@@ -9,6 +9,7 @@ A platform where entrepreneurs can submit their startup ideas for virtual pitch 
 - **GitHub Authentication**: Enables seamless login using GitHub accounts, powered by NextAuth.
 - **Sanity Integration**:
   - Sanity as a backend Content Management System (CMS).
+  - To access the Sanity Manager in dev mode, simply go to http://localhost:3000/studio
   - Automatically generates TypeScript types for Sanity schemas using `npm run typegen`.
   - Uses the Sanity Live Content API to ensure automatic revalidation and updates on data addition.
   - Sanity Learn resource: [Sanity Content-Driven Applications](https://www.sanity.io/learn/course/content-driven-web-application-foundations/generate-typescript-types).
