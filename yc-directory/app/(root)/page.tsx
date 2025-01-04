@@ -14,7 +14,7 @@ export default async function Home({searchParams}: {
   const params = { search: query || null };   // add the params to sanityFetch
 
   const session = await auth();
-  console.log(session?.id);
+  console.log("Session ID: ", session?.id);
 
   // const posts = await client.fetch(STARTUPS_QUERY);
   const {data: posts} = await sanityFetch({query: STARTUPS_QUERY, params});   // will refetch anytime new startup entry added by anyone
@@ -27,7 +27,7 @@ export default async function Home({searchParams}: {
         <p className="sub-heading !max-w-3xl">Submit Ideas, Vote on Pitches, and Get Noticed in Virtual Competitions</p>
 
         <SearchForm query={query} />
-        
+
       </section>
 
       <section className="section_container">
